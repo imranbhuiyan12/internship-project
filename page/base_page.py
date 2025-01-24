@@ -1,6 +1,7 @@
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.action_chains import ActionChains
+from support.logger import logger
 
 
 class BasePage:
@@ -11,19 +12,24 @@ class BasePage:
 
     def open_url(self, url):
         self.driver.get(url)
+        logger.info(f"Opening url: {url}")
 
 
 
     def find_element(self, *locator):
+        logger.info(f"Finding elements: {locator}")
         return self.driver.find_element(*locator)
 
     def find_elements(self, *locator):
+        logger.info(f"Finding elements: {locator}")
         return self.driver.find_element(*locator)
 
     def click(self, *locator):
+        logger.info(f"Clicking element: {locator}")
         self.driver.find_element(*locator).click()
 
     def input_text(self,text, *locator):
+        logger.info(f"Input text: {text}")
         self.driver.find_element(*locator).send_keys(text)
 
     def verify_text(self, expected_text, *locator):

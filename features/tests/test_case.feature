@@ -1,7 +1,7 @@
 
 Feature: internship project
 
-
+  @smoke
   Scenario: User can filter by sale status Out of Stocks
     Given Open the main page
     Then  Log in to the page email and password
