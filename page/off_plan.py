@@ -9,7 +9,7 @@ from page.base_page import BasePage
 class OffPlanPage(BasePage):
 
 
-    OFF_PLAN = (By.CSS_SELECTOR, "[class = 'menu-twobutton']")
+    OFF_PLAN = (By.CSS_SELECTOR, "[wized = 'mobileTabProperties']")
     OFF_PLAN_TITLE = (By.XPATH, "//a[text()='Off-plan']")
     DD_FILTER = (By.CSS_SELECTOR, "[id = 'Location-2']")
     ALL_PRODUCT = (By.CSS_SELECTOR, "[wized='cardOfProperty']")
